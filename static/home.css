@@ -1,0 +1,203 @@
+body {
+    background-color: #a3a3a3;
+    /** body에 배경이미지 적용 */
+    background-image: url("../static/images/pattern.png");
+    /** 고정된 사이즈로 설정 */
+    background-size: 100px;
+  
+    /** 기본 body 사이즈를 화면 크기로 고정 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+.bookcover {
+  /** 배경 색깔 지정  */
+  background-color: #b4d1da;
+    /** 모서리 둥글게 */
+    border-radius: 9px;
+    /** 윤곽선 */
+    border: 1px solid #738186;
+  
+    /** 기본 너비, 높이 지정 (반응형 X) */
+    width: 960px;
+    height: 600px;
+  
+    /** 좌우 마진을 auto(중앙에 배치), 상하 마진을 100px로 지정 */
+    margin: 100px auto;
+  
+    /** .bookdot 요소에서 absolute 속성값을 이용하기 위해 position: relative 로 설정 */
+    position: relative;
+  }
+  .bookdot{
+    border: dashed 4px white;
+    position: absolute;
+    left:10px;
+    top:10px;
+    width: 933px;
+    height: 573px;
+    border-radius: 9px;
+  }
+  .page{
+    position: absolute;
+    background-color: whitesmoke;
+    left:13px;
+    top:11px;
+    width: 910px;
+    height: 553px;
+    border-radius: 9px;
+    display: flex;
+  }
+.profile_box{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  margin: 0 7px 7px ;
+}
+.profile_box_top{
+  flex: 1;
+  background-color: whitesmoke;
+  font-size: 13px;
+  text-align: center;
+}
+ .content_box_top{
+  flex: 1;
+  background-color: whitesmoke;
+  font-size: 13px;
+}
+.profile_box_under{
+  flex:10;
+  background-color: white;
+  border-radius: 9px;
+  border: solid 1px;
+}
+.content_box_under{
+  flex:10;
+  background-color: white;
+  border-radius: 9px;
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+.content_box{
+  flex:10;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  margin: 0 0 7px 7px ;
+}
+.menu_box{
+  flex: 1.5;
+  margin: 7px 7px 7px 1px;
+}
+.day{
+  color: red;
+}
+.profile_image{
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 70px;
+  left: 16px;
+}
+.profile_text{
+  position: absolute;
+  top:240px;
+  left: 13px;
+  font-size: 20px;
+  font-family: 'East Sea Dokdo';
+}
+.content_box_text_news{
+  flex: 4;
+  margin-left: 6px;
+}
+.content_box_text_miniroom{
+  flex: 8;
+  margin-left: 6px;
+}
+.menu_box_text_home{
+  background-color: skyblue;
+  color: white;
+  border: solid 1px skyblue;
+  border-radius: 6px;
+  margin: 0 3px 7px 0;
+  height: 30px;
+}
+.menu_box a {
+  color: white;
+}
+.menu_box_text_diary{
+  background-color: skyblue;
+  color: white;
+  border: solid 1px skyblue;
+  border-radius: 6px;
+  margin: 0 3px 7px 0;
+  height: 30px;
+}
+.menu_box_text_picture {
+  background-color: skyblue;
+  color: white;
+  border: solid 1px skyblue;
+  border-radius: 6px;
+  margin: 0 3px 7px 0;
+  height: 30px;
+}
+.menu_box_text_visit{
+  background-color: skyblue;
+  border: solid 1px skyblue;
+  border-radius: 6px;
+  color: white;
+  margin: 0 3px 7px 0;
+  height: 30px;
+}
+.menu_box a:hover{
+  background-color: red;
+  color: white;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.dropbtn {
+  width: 170px;
+  border: 1px solid gray;
+  padding: 1px;
+  font-size: 13px;
+  margin-left: 12px;
+}
+
+.dropbtn span:nth-child(1) {
+  margin-right: 90px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 8px;
+  text-align: left;
+  min-width: 155px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: rgb(27, 25, 25);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+

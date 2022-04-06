@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/diary.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+            <div class="profile_box">
+                <div class="profile_box_top"><br><br>TODAY<span class="day">28</span>|TOTAL 215</div>
+                <div class="profile_box_under">
+                    <img class="profile_image" src="./static/images/moondisaster1.jpg">
+                    <p class="profile_text">저는 짜장면을 좋아합니다<br> 훠훠훠 뭐 짜장면 한그릇<br> 먹고 싶다던지 그런 소망 없어요?<br> 훠훠훠</p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="dropdown">
+                        <div class="dropbtn">
+                            <span>파도타기</span>
+                            <span>▼</span>
+                            <div class="dropdown-content">
+                                <li><a href="#">facebook 바로가기</a></li>
+                                <li><a href="#">instagram 바로가기</a></li>
+                                <li><a href="#">twitter 바로가기</a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_box">
+                <div class="content_box_top"><br><br>문재인화이팅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http;//url주소/나중에입력</div>
+                
+                <div class="content_box_under">
+                    <div class="diary_top">
+                        <div class="diary_top_text1">02.38<br>TUE</div>
+                        <div class="diary_top_text2">
+                            1&nbsp;2&nbsp;3&nbsp;4&nbsp;5&nbsp;6&nbsp;
+                            7&nbsp;8&nbsp;9&nbsp;10&nbsp;11&nbsp;12&nbsp;13&nbsp;14&nbsp;15&nbsp;
+                            16&nbsp;17&nbsp;18&nbsp;19&nbsp;20&nbsp;21&nbsp;22&nbsp;23&nbsp;24&nbsp;25&nbsp;26
+                            &nbsp;27&nbsp;28&nbsp;29&nbsp;30
+                        </div>
+                    </div>
+                    <div class="diary_under">
+                        <div class="diary_under_text1">
+                            <div class="diarydata">     
+                            2022 04 03     
+                            </div>
+                            <div class="diarycontent">
+                                가나다라마바사<br>
+                                아자차카타파하<br>
+                                기니디리미비시<br>
+                                이지치키티피히
+                            </div>
+                        </div>
+                        <br>
+                        <div class="diary_under_text2">
+                            <div class="diarydata">     
+                            2022 04 03     
+                            </div>
+                            <div class="diarycontent">
+                                가나다라마바사<br>
+                                아자차카타파하<br>
+                                기니디리미비시<br>
+                                이지치키티피히
+                            </div>
+                        </div>
+                        <br>
+                        <div class="diary_under_text3">
+                            <div class="diarydata">     
+                            2022 04 03     
+                            </div>
+                            <div class="diarycontent">
+                                가나다라마바사<br>
+                                아자차카타파하<br>
+                                기니디리미비시<br>
+                                이지치키티피히
+                            </div>
+                        </div>
+                        <br>
+                        <div class="diary_under_text4">
+                            <div class="diarydata">     
+                            2022 04 03     
+                            </div>
+                            <div class="diarycontent">
+                                가나다라마바사<br>
+                                아자차카타파하<br>
+                                기니디리미비시<br>
+                                이지치키티피히
+                            </div>
+                        </div>
+                        <br>
+                        <div class="diary_under_button">
+                            <center>
+                            <button class="diarybutton" onclick="gettextfile()">버튼입니다 훠훠훠</button>
+                            </center>
+                        </div>
+                        <div class="diary_under_text5" id="secret_box">
+                            <div class="diarydata">     
+                            2022 04 03     
+                            </div>
+                            <div class="diarycontent" id="secret_diary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_box">
+                <br><br>
+                <div class="menu_box_text_home"><a href="./home.html">홈</a></div>
+                <div class="menu_box_text_diary"><a  href="./diary.html">다이어리</a></div>
+                <div class="menu_box_text_picture"><a href="./picture.html">사진첩</a></div>
+                <div class="menu_box_text_visit"><a href="./visit.html">방명록</a></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function gettextfile(){
+            var input=document.createElement("input");
+            input.type="file";
+            input.accept="text/plain";
+            input.onchange=function(event){
+                processFile(event.target.files[0]);
+            };
+            input.click();
+        }
+        function processFile(file){
+            var reader=new FileReader();
+            reader.readAsText(file, "utf-8");
+            reader.onload=function(){
+                document.getElementById("secret_diary").innerText=reader.result;
+                document.getElementById("secret_box").style.display="block";
+            };
+        }
+    </script>
+
+  </body>
+</html>
